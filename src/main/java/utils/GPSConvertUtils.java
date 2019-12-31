@@ -47,7 +47,7 @@ public class GPSConvertUtils {
      * @param lon 经度
      * @param lat 纬度
      */
-    public static GPS gcj_To_Gps84(double lat, double lon) {
+    public static GPS gcj02_To_Gps84(double lat, double lon) {
         GPS gps = transform(lat, lon);
         double lontitude = lon * 2 - gps.getLon();
         double latitude = lat * 2 - gps.getLat();
@@ -93,7 +93,7 @@ public class GPSConvertUtils {
     public static GPS bd09_To_Gps84(double bd_lat, double bd_lon) {
 
         GPS gcj02 = bd09_To_Gcj02(bd_lat, bd_lon);
-        GPS map84 = gcj_To_Gps84(gcj02.getLat(),
+        GPS map84 = gcj02_To_Gps84(gcj02.getLat(),
                 gcj02.getLon());
         return map84;
 

@@ -15,7 +15,7 @@ public class AllConvert {
         System.out.println("wg84坐标转换为火星坐标结果:"+gps84_to_gcj02.toString());
 
         // 2. 火星坐标 => wg84坐标
-        GPS gcj_to_gps84 = GPSConvertUtils.gcj_To_Gps84(gps84_to_gcj02.getLat(), gps84_to_gcj02.getLon());
+        GPS gcj_to_gps84 = GPSConvertUtils.gcj02_To_Gps84(gps84_to_gcj02.getLat(), gps84_to_gcj02.getLon());
         System.out.println("火星坐标转换为wg84坐标结果:"+gcj_to_gps84.toString());
 
         // 3. 火星坐标GCJ-02 => 百度坐标BD-09
